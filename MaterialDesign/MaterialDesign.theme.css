@@ -84,14 +84,14 @@
     --skin-name: "Default";
     --skin-author: "TheCommieAxolotl";
 
-    --skin-accent-h: 264;
-    --skin-accent-s: 84%;
-    --skin-accent-l: 100;
+    --skin-accent-h: 215;
+    --skin-accent-s: 100%;
+    --skin-accent-l: 50;
     --skin-accent-a: 100;
 
-    --skin-background-h: 0;
-    --skin-background-s: 0%;
-    --skin-background-l: 100;
+    --skin-background-h: 200;
+    --skin-background-s: 00%;
+    --skin-background-l: 50;
     --skin-background-a: 100;
 
     --00dp: hsla(var(--skin-background-h, 0), calc(var(--saturation-factor, 1) * var(--skin-background-s, 0%)), calc(0.07% * var(--skin-background-l, 0)), calc(1% * var(--skin-background-a, 100)));
@@ -107,24 +107,24 @@
     --26dp: hsla(var(--skin-background-h, 0), calc(var(--saturation-factor, 1) * var(--skin-background-s, 0%)), calc(0.27% * var(--skin-background-l, 0)), calc(1% * var(--skin-background-a, 100)));
 
     --background-primary: var(--02dp); /* 02dp */
-    --background-secondary: var(--01dp); /* 01dp */
+    --background-secondary: var(--012dp); /* 01dp */
     --background-mobile-secondary: var(--01dp); /* 01dp */
     --background-accent: var(--12dp); /* 12dp */
     --background-tertiary: var(--00dp); /* 00dp */
     --background-secondary-alt: var(--06dp); /* 06dp */
     --channeltextarea-background: var(--24dp); /* 24dp */
     --background-floating: var(--24dp); /* 24dp */
-    --background-modifier-selected: var(--06dp); /* 06dp */
+    --background-modifier-selected: var(--08dp); /* 06dp */
     --background-modifier-hover: var(--02dp); /* 02dp */
-    --background-modifier-active: var(--04dp); /* 04dp */
+    --background-modifier-active: var(--06dp); /* 04dp */
     --background-mentioned: transparent;
     --modal-background: var(--24dp); /* 24dp */
     --background-mentioned-hover: #e7c21f04;
     --info-warning-foreground: hsl(54, calc(var(--saturation-factor, 1) * var(--skin-accent-s, 84%)), 75%);
-    --scrollbar-thin-thumb: var(--12dp); /* 12dp */
+    --scrollbar-thin-thumb: var(--0dp); /* 12dp */
     --scrollbar-thin-track: transparent;
-    --scrollbar-auto-thumb: var(--12dp); /* 12dp */
-    --scrollbar-auto-track: var(--04dp); /* 04dp */
+    --scrollbar-auto-thumb: var(--0dp); /* 12dp */
+    --scrollbar-auto-track: var(--0dp); /* 04dp */
     --input-background: var(--08dp); /* 08dp */
     --switch-checked-background: hsl(101, calc(var(--saturation-factor) * 54%), 27%);
     --switch-unchecked-background: #74796e33;
