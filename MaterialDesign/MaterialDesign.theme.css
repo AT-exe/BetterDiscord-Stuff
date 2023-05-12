@@ -20,65 +20,6 @@
 /* Source */
 @import url("https://thecommieaxolotl.github.io/BetterDiscord-Stuff/MaterialDesign/Clients/betterdiscord.css");
 
-		/* Addon lists */
-.bd-addon-list.bd-grid-view {
-  column-gap: var(--dplus-spacing-ui);
-  row-gap: var(--dplus-spacing-ui);
-}
-.bd-addon-list .bd-addon-card {
-	background: var(--dplus-bgc-ui-card);
-	border: none; border-radius: var(--dplus-radius-ui) !important;
-	max-height: 100%;
-	padding: var(--dplus-spacing-ui);
-	margin-bottom: var(--dplus-spacing-ui);
-}
-.bd-addon-list .bd-addon-header,
-.bd-description-wrap,
-.bd-addon-list .bd-footer {
-	padding: var(--dplus-spacing-ui);
-}
-
-.bd-addon-list .bd-addon-header {
-	border-radius: var(--dplus-radius-ui);
-}
-
-.bd-select .bd-select-options {background: var(--dplus-bg-2); backdrop-filter: var(--blurcalc-popout);}
-.bd-select-transparent .bd-select-options { border-radius: var(--dplus-radius-ui) !important; border-color: var(--dplus-bg-1);}
-.bd-search-wrapper, .bd-select .bd-select-option:hover, .bd-select .bd-select-option.selected { background: var(--dplus-bg-1);}
-.bda-slist .bda-header {
-	font-size: 14px;
-	line-height: 1.25;
-	padding-bottom: 5px;
-}
-.bda-slist .bda-description {
-	max-height: 100%;
-	overflow-y: hidden;
-	padding: 0;
-	padding-bottom: 2px;
-}
-.bda-slist .bda-footer, .bda-slist .bda-header {border: none;}
-.bda-name, .bda-author {
-	font-size: 16px;
-}
-.bda-author {
-	color: var(--dplus-accent-ui);
-}
-.bda-links {
-	font-size: 0;
-}
-.bda-links .bda-link {
-	font-size: 12px;
-}
-.bda-link:not(:first-of-type) {
-	margin-left: 10px;
-}
-.theme-dark .bda-slist .bda-header, .theme-dark .bda-slist .bda-description  { color: white; }
-
-
-
-
-
-
 
 :root {
     --font-primary: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -206,3 +147,503 @@
 }
 
 /* Made By The Commie Axolotl */
+
+
+
+.theme-dark {
+	--dplus-backdrop: url(https://i.imgur.com/3AiL3yN.png);
+	
+	--dplus-accent-color-hue: 320;
+	--dplus-accent-color-saturation: 60%;
+	--dplus-accent-color-lightness: 31%;
+	
+	--dplus-foreground-color-hue-base: 210; /* based on vanilla --text-normal hue */
+	--dplus-foreground-color-hue-links: 197;
+	--dplus-foreground-color-saturation-amount: 1;
+	--dplus-foreground-color-lightness-amount: 1;
+	
+	--dplus-background-color-hue: 320;
+	--dplus-background-color-saturation-amount: 1;
+	--dplus-background-color-lightness-amount: 1;
+	--dplus-background-color-alpha: 0.8;
+}
+.theme-light {
+	--dplus-backdrop: url(https://i.imgur.com/3AiL3yN.png);
+	
+	--dplus-accent-color-hue: 320;
+	--dplus-accent-color-saturation: 60%;
+	--dplus-accent-color-lightness: 31%;
+	
+	--dplus-foreground-color-hue-base: 210;
+	--dplus-foreground-color-hue-links: 197;
+	--dplus-foreground-color-saturation-amount: 1;
+	--dplus-foreground-color-lightness-amount: 1;
+	
+	--dplus-background-color-hue: 320;
+	--dplus-background-color-saturation-amount: 1;
+	--dplus-background-color-lightness-amount: 1;
+	--dplus-background-color-alpha: 0.8;
+}
+
+.theme-dark {
+	--dplus-background-color-lightness-025: 2.5%;
+	--dplus-background-color-lightness-050: 5.0%;
+	--dplus-background-color-lightness-075: 7.5%;
+	--dplus-background-color-lightness-100: 10.0%;
+	--dplus-background-color-lightness-150: 15.0%;
+	--dplus-background-color-lightness-200: 20.0%;
+}
+
+.theme-light {
+	--dplus-background-color-lightness-025: 97.5%;
+	--dplus-background-color-lightness-050: 95.0%;
+	--dplus-background-color-lightness-075: 92.5%;
+	--dplus-background-color-lightness-100: 90.0%;
+	--dplus-background-color-lightness-150: 85.0%;
+	--dplus-background-color-lightness-200: 80.0%;
+}
+.theme-dark, .theme-light {
+	--dplus-accent-ui: hsl(
+	var(--dplus-accent-color-hue),
+	var(--dplus-accent-color-saturation-factor),
+	calc(var(--dplus-accent-color-lightness) * 1)
+	);
+	--dplus-accent-ui-hover: hsl(
+	var(--dplus-accent-color-hue),
+	calc(var(--dplus-accent-color-saturation-factor) * 1.1),
+	calc(var(--dplus-accent-color-lightness) / 1.5)
+	);
+	
+	--dplus-accent-color-saturation-factor: calc(var(--dplus-accent-color-saturation) * var(--saturation-factor, 1));
+	--dplus-foreground-color-saturation-factor: calc(var(--dplus-foreground-color-saturation-amount, 1) * var(--saturation-factor, 1));
+	--dplus-background-color-saturation-factor: calc(var(--dplus-background-color-saturation-amount, 1) * var(--saturation-factor, 1));
+	
+	--dplus-bgc-ui-base: hsla(var(--dplus-background-color-hue), calc(var(--dplus-background-color-saturation-factor) * 50%), calc(var(--dplus-background-color-lightness-amount) * var(--dplus-background-color-lightness-075)), calc(var(--dplus-background-color-alpha) * var(--dplus-bg-ui-base-alpha-modifier, 100%)));
+	--dplus-bgc-ui-base-hover: hsla(var(--dplus-background-color-hue), calc(var(--dplus-background-color-saturation-factor) * 60%), calc(var(--dplus-background-color-lightness-amount) * var(--dplus-background-color-lightness-050)), calc(var(--dplus-background-color-alpha) * (var(--dplus-bg-ui-base-alpha-modifier, 100%) + var(--dplus-bg-hover-alpha-modifier, 10%))));
+	
+	--dplus-bgc-ui-card: hsla(var(--dplus-background-color-hue), calc(var(--dplus-background-color-saturation-factor) * 60%), calc(var(--dplus-background-color-lightness-amount) * var(--dplus-background-color-lightness-075)), calc(var(--dplus-background-color-alpha) * var(--dplus-bg-ui-card-alpha-modifier, 100%)));
+	--dplus-bgc-ui-card-hover: hsla(var(--dplus-background-color-hue), calc(var(--dplus-background-color-saturation-factor) * 75%), calc(var(--dplus-background-color-lightness-amount) * var(--dplus-background-color-lightness-100)), calc(var(--dplus-background-color-alpha) * (var(--dplus-bg-ui-card-alpha-modifier, 100%) + var(--dplus-bg-hover-alpha-modifier, 10%))));
+	
+	--dplus-bgc-chatmsg: hsla(var(--dplus-background-color-hue), calc(var(--dplus-background-color-saturation-factor) * 50%), calc(var(--dplus-background-color-lightness-amount) * var(--dplus-background-color-lightness-100)), calc(var(--dplus-background-color-alpha) * var(--dplus-bg-chat-alpha-modifier, 110%)));
+	--dplus-bgc-chatmsg-hover: hsla(var(--dplus-background-color-hue), calc(var(--dplus-background-color-saturation-factor) * 60%), calc(var(--dplus-background-color-lightness-amount) * var(--dplus-background-color-lightness-075)), calc(var(--dplus-background-color-alpha) * (var(--dplus-bg-chat-alpha-modifier, 110%) + var(--dplus-bg-hover-alpha-modifier, 10%))));
+	
+	--dplus-bgc-popout: hsla(var(--dplus-background-color-hue), calc(var(--dplus-background-color-saturation-factor) * 50%), calc(var(--dplus-background-color-lightness-amount) * var(--dplus-background-color-lightness-100)), calc(var(--dplus-background-color-alpha) * var(--dplus-bg-popout-alpha-modifier, 100%)));
+	
+	--dplus-bgc-button: hsla(var(--dplus-background-color-hue), calc(var(--dplus-background-color-saturation-factor) * 40%), calc(var(--dplus-background-color-lightness-amount) * var(--dplus-background-color-lightness-075)), calc(var(--dplus-background-color-alpha) * 115%));
+	--dplus-bgc-button-hover: hsla(var(--dplus-background-color-hue), calc(var(--dplus-background-color-saturation-factor) * 40%), calc(var(--dplus-background-color-lightness-amount) * var(--dplus-background-color-lightness-100)), calc(var(--dplus-background-color-alpha) * 115% + var(--dplus-bg-hover-alpha-modifier, 10%)));
+	
+	--dplus-bgc-server-button: hsla(var(--dplus-background-color-hue), calc(var(--dplus-background-color-saturation-factor) * 50%), calc(var(--dplus-background-color-lightness-amount) * var(--dplus-background-color-lightness-150)), calc(var(--dplus-background-color-alpha) / 3 * 2));
+	--dplus-bgc-server-button-hover: hsla(var(--dplus-background-color-hue), calc(var(--dplus-background-color-saturation-factor) * 50%), calc(var(--dplus-background-color-lightness-amount) * var(--dplus-background-color-lightness-200)), calc(var(--dplus-background-color-alpha) / 5 * 4));
+	
+	--dplus-bgc-radiobar-hover: hsla(var(--dplus-background-color-hue), calc(var(--dplus-background-color-saturation-factor) * 50%), calc(var(--dplus-background-color-lightness-amount) * var(--dplus-background-color-lightness-150)), calc(var(--dplus-background-color-alpha) * 100% + var(--dplus-bg-hover-alpha-modifier, 10%)));
+	--dplus-bgc-radiobar-selected: hsla(var(--dplus-background-color-hue), calc(var(--dplus-background-color-saturation-factor) * 50%), calc(var(--dplus-background-color-lightness-amount) * var(--dplus-background-color-lightness-200)), calc(var(--dplus-background-color-alpha) * 80%));	
+}
+
+:root {
+	/* Fonts */
+	--dplus-font-ui: 'Poppins';
+	--dplus-font-ui-ja: 'Kosugi';
+	--dplus-font-ui-ko: 'Gothic A1';
+	--dplus-font-ui-ru: 'PT Sans Caption';
+	--dplus-font-ui-vi: 'Raleway';
+	--dplus-font-ui-el: 'Commissioner';
+	--dplus-font-body: 'Roboto';
+	--dplus-font-header: 'Righteous';
+	--dplus-font-header-ja: 'RocknRoll One';
+	--dplus-font-header-ko: 'Black Han Sans';
+	--dplus-font-header-ru: 'Russo One';
+	--dplus-font-header-hi: 'Palanquin Dark';
+	--dplus-font-header-th: 'Mitr';
+	--dplus-font-header-el: 'Alegreya Sans';
+
+	/* Radiuses */
+	--dplus-radius-ui: 10px;
+	--dplus-radius-avatar: 20%;
+	--dplus-radius-server: 20%;
+
+	/* Spacing */
+	--dplus-spacing-ui: 10px;
+	--dplus-spacing-app: 10px;
+
+	/* Wordmark (Windows only) */
+	--dplus-wordmark: url(https://plusinsta.github.io/discord-plus/assets/wordmark_white.svg);
+
+	/* Icons */
+	--dplus-icon-home-dark: url(https://plusinsta.github.io/discord-plus/assets/discord/home_dark.svg);
+	--dplus-icon-home-light: url(https://plusinsta.github.io/discord-plus/assets/discord/home_light.svg);
+
+	/* Icon sizes*/
+	--dplus-icon-avatar-chat: 64px;
+	--dplus-icon-avatar-list: 32px;
+	--dplus-icon-avatar-profile: 80px;
+	
+	--dplus-icon-server-sidebar: 48px;
+	--dplus-icon-server-list: 32px;
+
+	/* Animation lengths */
+	--dplus-anim-short: .2s;
+	--dplus-anim-long: .5s;
+	--dplus-anim-sticky: .2s;
+	--dplus-anim-button: .25s;
+	--dplus-anim-button-appear: .25s;
+
+	/* Widths */
+	--dplus-channels-width: 240px;
+	--dplus-members-width: 240px;
+	--dplus-scrollbar-width: 10px;
+
+	/* Scales */
+	--dplus-blur-scale: 100;
+}
+
+/* Disable animations for reduce-motion */
+:root.reduce-motion {
+	--dplus-anim-short: 0s;
+	--dplus-anim-long: 0s;
+	--dplus-anim-sticky: 0s;
+	--dplus-anim-button: 0s;
+	--dplus-anim-button-appear: 0s;
+}
+
+/* Colors */
+.theme-dark {
+	/* The variable hell begins */
+	--header-primary: hsl(
+	0,
+	0%,
+	calc(var(--dplus-foreground-color-lightness-amount) * 100%)
+	);
+    --header-secondary: hsl(
+	calc(var(--dplus-foreground-color-hue-base) + 6),
+	calc(var(--dplus-foreground-color-saturation-factor) * 3.7%),
+	calc(var(--dplus-foreground-color-lightness-amount) * 73.5%)
+	);
+	
+    --text-normal: hsl(
+	var(--dplus-foreground-color-hue-base),
+	calc(var(--dplus-foreground-color-saturation-factor) * 2.9%),
+	calc(var(--dplus-foreground-color-lightness-amount) * 86.7%)
+	);
+    --text-muted: hsl(
+	calc(var(--dplus-foreground-color-hue-base) + 4),
+	calc(var(--dplus-foreground-color-saturation-factor) * 4%),
+	calc(var(--dplus-foreground-color-lightness-amount) * 65.3%)
+	);
+	
+    --text-link: hsl(
+	var(--dplus-foreground-color-hue-links),
+	calc(var(--dplus-foreground-color-saturation-factor) * 100%),
+	calc(var(--dplus-foreground-color-lightness-amount) * 47.8%)
+	);
+    --text-link-low-saturation: hsl(
+	var(--dplus-foreground-color-hue-links),
+	calc(var(--dplus-foreground-color-saturation-factor) * 100%),
+	calc(var(--dplus-foreground-color-lightness-amount) * 52.9%)
+	);
+
+    --text-positive: hsl(
+	139,
+	calc(var(--dplus-foreground-color-saturation-factor) * 51.6%),
+	calc(var(--dplus-foreground-color-lightness-amount) * 52.2%)
+	);
+    --text-warning: hsl(
+	38,
+	calc(var(--dplus-foreground-color-saturation-factor) * 95.7%),
+	calc(var(--dplus-foreground-color-lightness-amount) * 54.1%)
+	);
+    --text-danger: hsl(
+	359,
+	calc(var(--dplus-foreground-color-saturation-factor) * 82%),
+	calc(var(--dplus-foreground-color-lightness-amount) * 73.9%)
+	);
+	
+    --text-brand: hsl(
+	var(--dplus-accent-color-hue),
+	calc(var(--dplus-foreground-color-saturation-factor) * 86.1%),
+	calc(var(--dplus-foreground-color-lightness-amount) * 77.5%)
+	);
+	
+    --interactive-normal: hsl(
+	calc(var(--dplus-foreground-color-hue-base) + 6),
+	calc(var(--dplus-foreground-color-saturation-factor) * 3.7%),
+	calc(var(--dplus-foreground-color-lightness-amount) * 73.5%)
+	);
+    --interactive-hover: hsl(
+	var(--dplus-foreground-color-hue-base),
+	calc(var(--dplus-foreground-color-saturation-factor) * 2.9%),
+	calc(var(--dplus-foreground-color-lightness-amount) * 86.7%)
+	);
+    --interactive-active: hsl(
+	0,
+	calc(var(--dplus-foreground-color-saturation-factor) * 0%),
+	calc(var(--dplus-foreground-color-lightness-amount) * 100%)
+	);
+    --interactive-muted: hsl(
+	calc(var(--dplus-foreground-color-hue-base) + 7),
+	calc(var(--dplus-foreground-color-saturation-factor) * 7.6%),
+	calc(var(--dplus-foreground-color-lightness-amount) * 33.5%)
+	);
+	
+	--channels-default: hsl(
+	calc(var(--dplus-foreground-color-hue-base) + 13),
+	calc(var(--dplus-foreground-color-saturation-factor) * 3.4%),
+	calc(var(--dplus-foreground-color-lightness-amount) * 60.2%)
+	);
+
+	--channel-icon: hsl(
+	calc(var(--dplus-foreground-color-hue-base) + 3),
+	calc(var(--dplus-foreground-color-saturation-factor) * 4.1%),
+	calc(var(--dplus-foreground-color-lightness-amount) * 57.5%)
+	);	
+}
+
+.theme-light {
+	/* The variable hell continues */
+	--header-primary: hsl(
+	calc(var(--dplus-foreground-color-hue) + 30),
+	calc(var(--dplus-foreground-color-saturation-factor) * 7.7%),
+	calc(var(--dplus-foreground-color-lightness-amount) * 2.5%)
+	);
+    --header-secondary: hsl(
+	calc(var(--dplus-foreground-color-hue-base) + 5),
+	calc(var(--dplus-foreground-color-saturation-factor) * 9.7%),
+	calc(var(--dplus-foreground-color-lightness-amount) * 34.3%)
+	);
+	
+    --text-normal: hsl(
+	var(--dplus-foreground-color-hue-base),
+	calc(var(--dplus-foreground-color-saturation-factor) * 9.8%),
+	calc(var(--dplus-foreground-color-lightness-amount) * 20%)
+	);
+    --text-muted: hsl(
+	calc(var(--dplus-foreground-color-hue-base) + 3),
+	calc(var(--dplus-foreground-color-saturation-factor) * 9.6%),
+	calc(var(--dplus-foreground-color-lightness-amount) * 40.8%)
+	);
+	
+    --text-link: hsl(
+	calc(var(--dplus-foreground-color-hue-links) + 15),
+	calc(var(--dplus-foreground-color-saturation-factor) * 100%),
+	calc(var(--dplus-foreground-color-lightness-amount) * 43.9%)
+	);
+    --text-link-low-saturation: hsl(
+	calc(var(--dplus-foreground-color-hue-links) + 15),
+	calc(var(--dplus-foreground-color-saturation-factor) * 100%),
+	calc(var(--dplus-foreground-color-lightness-amount) * 43.9%)
+	);
+
+    --text-positive: hsl(
+	139,
+	calc(var(--dplus-foreground-color-saturation-factor) * 47.1%),
+	calc(var(--dplus-foreground-color-lightness-amount) * 33.3%)
+	);
+    --text-warning: hsl(
+	38,
+	calc(var(--dplus-foreground-color-saturation-factor) * 81.5%),
+	calc(var(--dplus-foreground-color-lightness-amount) * 31.8%)
+	);
+    --text-danger: hsl(
+	359,
+	calc(var(--dplus-foreground-color-saturation-factor) * 85.6%),
+	calc(var(--dplus-foreground-color-lightness-amount) * 64.7%)
+	);
+	
+    --text-brand: hsl(
+	var(--dplus-accent-color-hue),
+	calc(var(--dplus-foreground-color-saturation-factor) * 85.6%),
+	calc(var(--dplus-foreground-color-lightness-amount) * 64.7%)
+	);
+	
+    --interactive-normal: hsl(
+	calc(var(--dplus-foreground-color-hue-base) + 5),
+	calc(var(--dplus-foreground-color-saturation-factor) * 9.7%),
+	calc(var(--dplus-foreground-color-lightness-amount) / 1.5 * 34.3%)
+	);
+    --interactive-hover: hsl(
+	var(--dplus-foreground-color-hue-base),
+	calc(var(--dplus-foreground-color-saturation-factor) * 9.8%),
+	calc(var(--dplus-foreground-color-lightness-amount) / 1.5 * 20%)
+	);
+    --interactive-active: hsl(
+	calc(var(--dplus-foreground-color-hue-base) + 30),
+	calc(var(--dplus-foreground-color-saturation-factor) * 7.7%),
+	calc(var(--dplus-foreground-color-lightness-amount) / 1.5 * 2.5%)
+	);
+    --interactive-muted: hsl(
+	var(--dplus-foreground-color-hue-base),
+	calc(var(--dplus-foreground-color-saturation-factor) * 9.8%),
+	calc(var(--dplus-foreground-color-lightness-amount) / 1.5 * 80%)
+	);
+	
+	--channels-default: hsl(
+	calc(var(--dplus-foreground-color-hue-base) + 3),
+	calc(var(--dplus-foreground-color-saturation-factor) * 9.6%),
+	calc(var(--dplus-foreground-color-lightness-amount) / 1.5 * 40.8%)
+	);
+
+	--channel-icon: hsl(
+	calc(var(--dplus-foreground-color-hue-base) + 3),
+	calc(var(--dplus-foreground-color-saturation-factor) * 9.4%),
+	calc(var(--dplus-foreground-color-lightness-amount) / 1.5 * 45.9%)
+	);
+}
+
+/* Blur */
+:root {
+	--dplus-blur-ui: 2px;
+	--dplus-blur-popout: 3px;
+	--blurcalc-popout: blur(calc(var(--dplus-blur-popout) / 100 * var(--dplus-blur-scale)));
+	--blurcalc-ui: blur(calc(var(--dplus-blur-ui) / 100 * var(--dplus-blur-scale)));
+}
+
+
+/* Discord's variables */
+.theme-dark, .theme-light {
+	--background-primary: var(--dplus-bgc-ui-base) !important;
+	--background-secondary: var(--dplus-bgc-ui-card) !important;
+	--background-tertiary: var(--dplus-bgc-popout) !important;
+	--background-secondary-alt: hsla(var(--dplus-background-color-hue), calc(var(--dplus-background-color-saturation-factor) * 50%), calc(var(--dplus-background-color-lightness-amount) * var(--dplus-background-color-lightness-150)), calc(var(--dplus-background-color-alpha) * var(--dplus-bgc-ui-card-alpha-modifier, 100%) / 5 * 4)) !important; /* bottom-left account details */
+	--channelbodyarea-background: transparent !important;
+	--background-floating: var(--dplus-bgc-popout) !important;
+	--background-mobile-primary: var(--dplus-bgc-ui-base);
+	--background-mobile-secondary: var(--dplus-bgc-ui-base);
+	--radio-group-dot-foreground: white;
+	--brand-color: var(--brand-experiment);
+	--brand-color-hover: var(--brand-experiment);
+
+	/* get ready for a ton of nearly identical variables. thanks discord devs */
+	--brand-experiment: hsl(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.856),calc(var(--dplus-accent-color-lightness)*0.647));
+    --brand-experiment-100: hsl(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.778),98.2%);
+    --brand-experiment-130: hsl(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.875),96.9%);
+    --brand-experiment-160: hsl(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.846),94.9%);
+    --brand-experiment-200: hsl(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.833),92.9%);
+    --brand-experiment-230: hsl(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.870),91%);
+    --brand-experiment-260: hsl(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.862),88.6%);
+    --brand-experiment-300: hsl(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.861),85.9%);
+    --brand-experiment-330: hsl(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.851),81.6%);
+    --brand-experiment-360: hsl(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.861),77.5%);
+    --brand-experiment-400: hsl(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.861),71.8%);
+    --brand-experiment-430: hsl(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.857),69.8%);
+    --brand-experiment-460: hsl(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.855),67.5%);
+    --brand-experiment-500: hsl(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.856),64.7%);
+    --brand-experiment-530: hsl(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.667),58.8%);
+    --brand-experiment-560: hsl(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.514),52.4%);
+    --brand-experiment-600: hsl(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.467),44.1%);
+    --brand-experiment-630: hsl(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.467),38.2%);
+    --brand-experiment-660: hsl(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.471),33.3%);
+    --brand-experiment-700: hsl(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.470),25.9%);
+    --brand-experiment-730: hsl(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.468),24.3%);
+    --brand-experiment-760: hsl(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.469),22.2%);
+    --brand-experiment-800: hsl(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.475),19.4%);
+    --brand-experiment-830: hsl(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.474),14.9%);
+    --brand-experiment-860: hsl(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.469),9.6%);
+    --brand-experiment-900: hsl(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.500),3.1%);
+    --brand-experiment-05a: hsla(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.856),64.7%,0.05);
+    --brand-experiment-10a: hsla(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.856),64.7%,0.1);
+    --brand-experiment-15a: hsla(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.856),64.7%,0.15);
+    --brand-experiment-20a: hsla(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.856),64.7%,0.2);
+    --brand-experiment-25a: hsla(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.856),64.7%,0.25);
+    --brand-experiment-30a: hsla(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.856),64.7%,0.3);
+    --brand-experiment-35a: hsla(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.856),64.7%,0.35);
+    --brand-experiment-40a: hsla(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.856),64.7%,0.4);
+    --brand-experiment-45a: hsla(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.856),64.7%,0.45);
+    --brand-experiment-50a: hsla(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.856),64.7%,0.5);
+    --brand-experiment-55a: hsla(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.856),64.7%,0.55);
+    --brand-experiment-60a: hsla(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.856),64.7%,0.6);
+    --brand-experiment-65a: hsla(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.856),64.7%,0.65);
+    --brand-experiment-70a: hsla(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.856),64.7%,0.7);
+    --brand-experiment-75a: hsla(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.856),64.7%,0.75);
+    --brand-experiment-80a: hsla(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.856),64.7%,0.8);
+    --brand-experiment-85a: hsla(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.856),64.7%,0.85);
+    --brand-experiment-90a: hsla(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.856),64.7%,0.9);
+    --brand-experiment-95a: hsla(var(--dplus-accent-color-hue),calc(var(--dplus-accent-color-saturation-factor)*0.856),64.7%,0.95);
+}
+
+.theme-dark {
+	--bd-blue: var(--dplus-accent-ui) !important;
+	--background-accent: var(--dplus-accent-ui);
+}
+
+.theme-light {
+	--bd-blue: var(--dplus-accent-ui) !important;
+	--background-accent: var(--dplus-accent-ui);
+}
+
+
+/* Quick and dirty fix for create a new server in dark mode */
+.theme-dark .layer-1Ixpg3 .theme-light { /* the ones i actually need */
+	--header-primary: #060607;
+	--header-secondary: #4f5660;
+	--text-normal: #2e3338;
+	--interactive-normal: #4f5660;
+}
+
+
+/* Background image */
+#app-mount {
+	background: var(--dplus-backdrop) !important;
+	background-size: cover !important;
+	background-position: center !important;
+}
+body { background-color: var(--dplus-accent-ui); }
+
+.appMount-2yBXZl, .app-2CXKsg, .bg-1QIAus {
+	background-color: transparent;
+}
+
+/* Fonts */
+	/* Display font */
+:root {
+	--font-display: var(--dplus-font-ui), 'Poppins', var(--dplus-font-ui-ru), 'Comfortaa', var(--dplus-font-ui-vi), 'Raleway', var(--dplus-font-ui-ja), 'Kosugi',  var(--dplus-font-ui-ko), 'Gothic A1', var(--dplus-font-ui-el), 'Commissioner', '-apple-system', 'Helvetica Neue', 'system-ui', 'Tahoma', 'Segoe UI', 'Helvetica', 'Whitney', sans-serif !important;
+	--font-primary: var(--font-display);
+	--font-japanese: var(--font-display);
+	--font-korean: var(--font-display);
+	--font-chinese-simplified: var(--font-display);
+	--font-chinese-traditional: var(--font-display);
+}
+body, button, select {
+	font-family: var(--font-display);
+}
+
+	/* Text font */
+::placeholder, ::-webkit-input-placeholder, p, bodyarea, input, select, textarea,
+.message-2CShn3, .markup-eYLPri, /*chat messages*/
+.subText-OGOWMj, /*member list body*/
+.customStatusText-_4TbWr, /*user's custom status*/
+.modeDefault-2fEh7a, /*settings small body*/
+.emojiInput-1aLNse, .emojiAliasPlaceholder-3H_iZA, /*server settings: emoji name*/
+.topic-11NuQZ, /*channel topic in chat header*/
+.content-1G6Z6z, /*channel topic popup body*/
+.bd-description /*BD: plugin/theme desc*/ {
+	font-family: var(--dplus-font-body), 'Roboto', '-apple-system', 'Helvetica Neue', 'system-ui', 'Arial', 'Helvetica', 'Whitney', sans-serif !important;
+}
+
+	/* Names, titles, and headers font */
+header, h1,
+.nameAndDecorators-3ERwy2, /*name in member list*/
+.headerNameWrapper-3res2c, /*nickname in profile popup*/
+.username-h_Y3Us, /*username in chat*/
+.headerText-15Q25Z, /*username#tag in profile popup*/
+.nickname-2gQ76l, /*nickname in profile popup*/
+.nameTag-sc-gpq, /*your username in the bottom-left*/
+.detailsInner-2IFSJC, /*settings: your username in My Account*/
+.activityName-3YXl6e, /*user's activity name, includes song and author titles*/
+.emojiUploader-1f0pVx, /*server settings: emoji's uploader*/
+.userHook-3AdCBF, /*server settings: username in audit log*/
+.secondaryHeader-2oeRPO, /*server settings: integrations row headers such as bot names*/
+.roleName-2ZJJYR, /*role name in profile*/
+.roleName-35qCvR, .roleName-3910zV, /*role name in server settings*/
+.membersGroup-2eiWxl, /*role name in member list*/
+.roleRow-3HnunM, /*role name in context menu*/
+.roleMention-11Aaqi, /*role name mention in chat*/
+.wrapper-1ZcZW-, /*username or channel name mention in chat*/
+[data-slate-object="inline"] .mention, /*mention in message box*/
+.systemMessage-1H1Z20 .anchorUnderlineOnHover-2qPutX, /* links / usernames in system messages */
+.name-3BUDLf, /*category name in sidebar*/
+.name-28HaxV, /*channel name in sidebar*/
+.title-17SveM, /*channel name in chat header*/
+.title-3hptVQ, /*channel name in channel topic popup*/
+.bd-author, .bd-meta .bd-link, /*BD: plugin/theme author*/
+.timestamp-p1Df1m /*chat message hover timestamp (counts as a header)*/ {
+	font-family: var(--dplus-font-header), 'Righteous', var(--dplus-font-header-ja), 'RocknRoll One', var(--dplus-font-header-ko), 'Black Han Sans', var(--dplus-font-header-ru), 'Russo One', var(--dplus-font-header-hi), 'Palanquin Dark', var(--dplus-font-header-th), 'Mitr', var(--dplus-font-header-el), 'Alegreya Sans', 'Lalezar', 'Century Gothic', 'Franklin Gothic Medium', 'Britannic', 'Helvetica Neue', 'Helvetica', 'Whitney', sans-serif !important;
+}
